@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* style for header */
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.notification-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.user-inner-img {
+    object-fit: cover;
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+}
+
+.profile {
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+
+.mat-toolbar {
+    background-color: white;
+}
+
+/* style for side bar */
+.main-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.navigation-sidebar {
+    width: 300px;
+    height: 100%;
+}
+
+app-sidebar {
+    display: block;
+    color: #84A8C9;
+    padding: 30px;
+    font-size: large;
+    background-color: #091C2C;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-title {
+    margin: 20px;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar-nav-item:hover {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    background-color: #11304B;
+    cursor: pointer;
+}
+
+/* style for main content */
+.main-content{
+    height: 100%;
+    width: 100%;
+}
+
+/* style for city list header */
+.city-list-header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+hr{
+    margin: 0px;
+}
