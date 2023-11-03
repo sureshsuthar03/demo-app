@@ -1,0 +1,27 @@
+<div>
+    <div>
+        <div class="upsert-header">
+            <mat-icon (click)="goBack()" style="cursor: pointer;">arrow_back_ios</mat-icon>
+            <h1>Add / Edit Country</h1>
+        </div>
+        <form class="city-upsert-formfield" [formGroup]="countryForm" (submit)="onInsertCountry()">
+            
+            <input type="number" class="input-text" hidden for="name" formControlName="id">
+
+            <input type="text" class="input-text" placeholder="Country Name*" id="name" formControlName="name">
+            <span *ngIf="validCall.name.errors?.['required'] && validCall.name.touched" class="error-msg">This field is required</span>
+            <span *ngIf="validCall.name.errors?.['pattern'] && validCall.name.touched" class="error-msg">Enter valid name</span>
+
+            <div class="checkbox-input">
+                <input type="checkbox" name="status" id="status" value=1 formControlName="status">
+                <label for="status">Active</label>
+            </div>
+
+            <div class="form-submit-area">
+                <button mat-stroked-button class="crud-btn" type="reset">Cancel</button>
+                <button mat-raised-button class="add-btn" type="submit">Save</button>
+            </div>
+        </form>
+        
+    </div>
+</div>

@@ -1,23 +1,11 @@
 <header>
     <app-header></app-header>
 </header>
-<main class="main-body">
-    <div class="navigation-sidebar">
+<mat-sidenav-container class="main-body">
+    <mat-sidenav mode="side" [opened]="sidebarToggle" class="navigation-sidebar">
         <app-sidebar></app-sidebar>
-    </div>
-    <div class="main-content">
+    </mat-sidenav>
+    <mat-sidenav-content>
         <router-outlet></router-outlet>
-    </div>
-</main>
-<!-- <app-header></app-header>
-<mat-grid-list cols="4" rowHeight="5:12">
-    <mat-grid-tile>
-        <app-sidebar>
-        </app-sidebar>
-    </mat-grid-tile>
-    <mat-grid-tile> 
-        <router-outlet>
-
-        </router-outlet>
-    </mat-grid-tile>
-</mat-grid-list> -->
+    </mat-sidenav-content>
+</mat-sidenav-container>

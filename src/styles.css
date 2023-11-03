@@ -87,7 +87,7 @@ app-sidebar {
     padding: 20px;
 }
 
-.sidebar-nav-item:hover {
+.sidebar-nav-item:hover{
     display: flex;
     align-items: center;
     padding: 20px;
@@ -96,19 +96,125 @@ app-sidebar {
     background-color: #11304B;
     cursor: pointer;
 }
+.sidebar-nav-item-active{
+    border-radius: 5px;
+    color: white;
+    background-color: #11304B;
+}
 
 /* style for main content */
-.main-content{
+.main-content {
     height: 100%;
     width: 100%;
 }
 
 /* style for city list header */
-.city-list-header{
+.city-list-header {
     padding: 20px;
     display: flex;
     justify-content: space-between;
 }
-hr{
+
+hr {
     margin: 0px;
+}
+
+.add-btn {
+    color: white !important;
+    background-color: #3D73DD !important;
+}
+
+/* style for search bar*/
+.search-field {
+    position: relative;
+    display: flex !important;
+    align-items: center !important;
+    margin: 10px;
+    height: 50px;
+}
+
+.search-icon {
+    position: absolute;
+    margin-left: 10px;
+}
+
+.searchbar {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: medium;
+    padding: 10px;
+    padding-left: 40px;
+    width: 100%;
+}
+
+/* style for table */
+.table {
+    color: lightgray;
+    margin: 0px;
+}
+
+.crud-btn {
+    border-color: #3D73DD !important;
+    color: #3D73DD !important;
+    margin: 0px 5px;
+}
+
+/* style for upsert */
+.upsert-header {
+    display: flex;
+    align-items: center;
+    margin: 0px !important;
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.upsert-header h1 {
+    margin: 0px;
+}
+
+.city-upsert-formfield {
+    padding: 30px;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.input-text,
+.input-select {
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: medium;
+    padding: 10px;
+}
+
+.checkbox-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    font-size: medium;
+    padding: 10px;
+}
+
+.form-submit-area {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+/* style for dialog box  */
+.dialogbox-action-btn {
+    display: flex;
+    justify-content: center !important;
+}
+.dialogbox-title{
+    background-color: #3D73DD;
+}
+.dialogbox-title span{
+    color: white !important;
+}
+.error-msg{
+    color: red;
+    margin-left: 20px;
 }

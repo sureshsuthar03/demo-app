@@ -1,10 +1,82 @@
 <div style="padding: 10px;">
     <div class="city-list-header">
         <h1 class="mat-h1">City</h1>
-        <button mat-raised-button color="primary">+ Add new city</button>
+        <button mat-raised-button class="add-btn" routerLink="/home/city-upsert">+ Add new city</button>
     </div>
     <hr>
     <div>
-        
+        <div class="search-field">
+            <mat-icon class="search-icon">search</mat-icon>
+            <input type="text" class="searchbar" matInput placeholder="Search here...">
+        </div>
+        <div>
+            <!-- <table class="table">
+                <thead>
+                    <tr>
+                        <th>City Name</th>
+                        <th>Country Name</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>name</td>
+                        <td>name</td>
+                        <td>active</td>
+                        <td>
+                            <button mat-stroked-button class="crud-btn">    
+                                <mat-icon>visibility</mat-icon>
+                                <span>View</span>
+                            </button>
+                            <button mat-stroked-button class="crud-btn" routerLink="/home/city-upsert">
+                                <mat-icon>edit</mat-icon>
+                                <span>Edit</span>
+                            </button>
+                            <button mat-stroked-button class="crud-btn" (click)="openDialog()">
+                                <mat-icon>delete</mat-icon>
+                                <span>Delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> -->
+            <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource">
+              
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                  </ng-container>
+              
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                  </ng-container>
+              
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                  </ng-container>
+              
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                  </ng-container>
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+              
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                               showFirstLastButtons
+                               aria-label="Select page of periodic elements">
+                </mat-paginator>
+              </div>
+        </div>
     </div>
 </div>

@@ -1,0 +1,54 @@
+<div style="padding: 10px;">
+    <div class="city-list-header">
+        <h1 class="mat-h1">Country</h1>
+        <button mat-raised-button class="add-btn" routerLink="/home/country-upsert">+ Add new country</button>
+    </div>
+    <hr>
+    <div>
+        <div class="search-field">
+            <mat-icon class="search-icon">search</mat-icon>
+            <input type="text" class="searchbar" matInput placeholder="Search here..." (input)="onSearch($event)">
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Country Name</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let country of countryList">
+                        <td>
+                            {{country.name}}
+                        </td>
+                        <td>
+                            <p *ngIf="country.status==1">active</p>
+                            <p *ngIf="country.status==2">inactive</p>
+                            <p *ngIf="country.status==10">deleted</p>
+                        </td>
+                        <td>
+                            <button mat-stroked-button class="crud-btn">    
+                                <mat-icon>visibility</mat-icon>
+                                <span>View</span>
+                            </button>
+                            <button mat-stroked-button class="crud-btn" routerLink="/home/country-upsert/{{country.id}}">
+                                <mat-icon>edit</mat-icon>
+                                <span>Edit</span>
+                            </button>
+                            <button mat-stroked-button class="crud-btn" (click)="openDialog(country.id)">
+                                <mat-icon>delete</mat-icon>
+                                <span>Delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <mat-paginator #paginator showFirstLastButtons [pageSizeOptions]="pageSizeOptions" [length]="pageLength" [pageSize]="pageSize" (page)="onChangePage($event)">
+            </mat-paginator>
+        </div>
+    </div>
+</div>
