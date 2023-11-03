@@ -7,7 +7,7 @@ import { CountriesComponent } from './Components/countries/countries.component';
 import { CountryUpsertComponent } from './Components/countries/country-upsert/country-upsert.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "home" },
+  { path: "", redirectTo: "home/city" },
   {
     path: "home",
     component: HomeComponent,
