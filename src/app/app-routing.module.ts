@@ -19,7 +19,7 @@ const routes: Routes = [
       { path: "country-upsert/:id", component: CountryUpsertComponent },
     ],
   },
-  { path: "*", redirectTo: "home" },
+  { path: "*", redirectTo: "home/city" },
 ];
 
 @NgModule({
