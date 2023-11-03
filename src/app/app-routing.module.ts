@@ -7,19 +7,10 @@ import { CountriesComponent } from './Components/countries/countries.component';
 import { CountryUpsertComponent } from './Components/countries/country-upsert/country-upsert.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "home/city" },
   {
-    path: "home",
-    component: HomeComponent,
-    children: [
-      { path: "city", component: CityComponent },
-      { path: "city-upsert", component: CityUpsertComponent },
-      { path: "country", component: CountriesComponent },
-      { path: "country-upsert", component: CountryUpsertComponent },
-      { path: "country-upsert/:id", component: CountryUpsertComponent },
-    ],
-  },
-  { path: "*", redirectTo: "home/city" },
+    path : "",
+    component : CityComponent
+  }
 ];
 
 @NgModule({
