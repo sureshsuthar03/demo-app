@@ -8,7 +8,7 @@ import { HeaderComponent } from './Components/laytout/header/header.component';
 import { FooterComponent } from './Components/laytout/footer/footer.component';
 import { SidebarComponent } from './Components/laytout/sidebar/sidebar.component';
 import { HomeComponent } from './Components/home/home.component';
-import { CityComponent } from './components/city/city.component';
+import { CityComponent } from './Components/city/city.component';
 import { CityListComponent } from './Components/city/city-list/city-list.component';
 import { CityUpsertComponent } from './Components/city/city-upsert/city-upsert.component';
 import { DialogBoxComponent } from './Components/control/dialog-box/dialog-box.component';
