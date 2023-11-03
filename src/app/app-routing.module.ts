@@ -8,17 +8,17 @@ import { CountryUpsertComponent } from './Components/countries/country-upsert/co
 
 
 const routes: Routes = [
+  { path: "", redirectTo: "home", pathMatch: "full" },
   {
-    path: "",
-    component: HomeComponent
+    path: "home", component: HomeComponent, children: [
+      { path: "city", component: CityComponent },
+      { path: "city-upsert", component: CityUpsertComponent },
+      { path: "country", component: CountriesComponent },
+      { path: "country-upsert", component: CountryUpsertComponent },
+      { path: "country-upsert/:id", component: CountryUpsertComponent }
+    ]
   },
-
-  { path: "home/city", component: CityComponent },
-  { path: "home/city-upsert", component: CityUpsertComponent },
-  { path: "home/country", component: CountriesComponent },
-  { path: "home/country-upsert", component: CountryUpsertComponent },
-  { path: "home/country-upsert/:id", component: CountryUpsertComponent },
-  { path: "**", component: HomeComponent }
+  { path: "**", redirectTo: "home" }
 ];
 
 @NgModule({
